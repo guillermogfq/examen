@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Examen</title>
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+
+    <div class="views">
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Examen</div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a id="takephotobtn" class="tab-link">
+                  <i class="f7-icons">camera_fill</i>
+                  <span class="tabbar-label">Tomar Foto</span>
+              </a>
+          </div>
+        </div>
+
+        <div class="pages navbar-through toolbar-through">
+          <div data-page="index" class="page">
+            <div class="page-content">
+              <div class="content-block-title">Fotos</div>
+              <!-- card de prueba, se deben generar dinámicamente al tomar una foto-->
+                <div id="container_photos">
+                  <div class="card facebook-card">
+                    <div class="card-header no-border">
+                      <div class="facebook-avatar"><img src="img/i-f7-ios.png" width="34" height="34"></div>
+                      <div class="facebook-name">FACE - Universidad del Bío-Bío</div>
+                    </div>
+                    <div class="card-content"><img src="img/face.jpg" width="100%"></div>
+                    <div class="card-footer no-border">
+                      <a onclick="openPopUp();" class="link">Ver Posición en el Mapa</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup popup-map">
+          <div class="content-block">
+            <div class="content-block-title">Mapa</div>
+            <div class="content-block inset">
+              <div id="map" class="content-block-inner" height="350px">
+              </div>
+            </div>
+            <center>
+              <a class="close-popup">Cerrar Mapa</a>
+            </center>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4T8UukN_jQm1Olr8b6ajAbjmR7D29d20&callback=initMap"></script>
+  </body>
+</html>
